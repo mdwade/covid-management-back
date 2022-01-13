@@ -20,4 +20,16 @@ export class CovidService {
     async getQII1(iso_code: any, startedDate: any, endedDate: any) {
         return this.covidRepository.getQII1(iso_code, startedDate, endedDate);
     }
+
+    async getQII2(iso_code: any, startedDate: any, endedDate: any) {
+        return this.covidRepository.getQII2(iso_code, startedDate, endedDate);
+    }
+
+    async getQII3(date: any) {
+        return this.covidRepository.getQII3(date);
+    }
+
+    async getQII4(location: any) {
+        return this.covidRepository.getQII4(location);
+    }
 }

@@ -33,11 +33,11 @@ export class CovidController {
 
     @Get('ii/q3/:date')
     async getQII3(@Param() params){
-        return this.covidService.getQI1(params.date);
+        return this.covidService.getQII3(params.date);
     }
 
-    @Get('ii/q4')
-    async getQII4(){
-    
+    @Get('ii/q4/:location')
+    async getQII4(@Param() params){
+        return (await this.covidService.getQII4(params.location));
     }
 }
